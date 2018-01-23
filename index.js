@@ -4,7 +4,8 @@ import {
   TextInput,
   findNodeHandle,
   NativeModules
-} from 'react-native'
+} from 'react-native';
+import { TextField } from 'react-native-material-textfield';
 
 const mask = NativeModules.RNTextInputMask.mask
 const unmask = NativeModules.RNTextInputMask.unmask
@@ -42,7 +43,7 @@ export default class TextInputMask extends Component {
   }
 
   render() {
-    return (<TextInput
+    return (<TextField
       {...this.props}
       value={undefined}
       ref={ref => {
